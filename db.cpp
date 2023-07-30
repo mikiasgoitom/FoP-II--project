@@ -19,9 +19,9 @@ void saveFile(ofstream &file, const vector<Book> &books) {
 }
 
 vector<Book> parseFile(ifstream &file) {
-  // if (!file.is_open()) {
-  //   throw "Unable to open file";
-  // }
+  if (!file.is_open()) {
+    throw "Unable to open file";
+  }
 
   vector<Book> books;
   string line;

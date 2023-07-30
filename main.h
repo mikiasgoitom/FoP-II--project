@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+#define FILENAME "db.txt"
+
 enum class Status { CheckedOut, CheckedIn };
 
 struct Book {

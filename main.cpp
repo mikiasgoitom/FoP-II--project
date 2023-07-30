@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-	ifstream file2("db.txt");
+	ifstream file2(FILENAME);
 	vector<Book> books2 = parseFile(file2);
 	for (const Book &book : books2) {
 		print_book(book);

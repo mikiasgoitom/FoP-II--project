@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <sstream>
 #include <algorithm>
 using namespace std;
 struct Book {
@@ -55,22 +56,25 @@ else if(choice==2){
         case 3:
             displayInventory();
             break;
-        case 4:
-            analyzeDemand();
+         case 4:
+            displayOutdatedBooks();
             break;
         case 5:
-            addStaff();
+            analyzeDemand();
             break;
         case 6:
-            removeStaff();
+            addStaff();
             break;
         case 7:
-            displayStaffList();
+            removeStaff();
             break;
         case 8:
-            searchStaff();
+            displayStaffList();
             break;
         case 9:
+            searchStaff();
+            break;
+        case 10:
         cout << "Exiting program. Goodbye!\n";
         break;
     }
@@ -98,12 +102,13 @@ void displayStaffMenu() {
     cout << "1. Add Book\n";
     cout << "2. Remove Book\n";
     cout << "3. Display Inventory\n";
-    cout << "4. Analyze Demand\n";
-    cout << "5. Add Staff\n";
-    cout << "6. Remove Staff\n";
-    cout << "7. Display Staff List\n";
-    cout << "8. Search Staff\n";
-    cout << "9. Exit\n";
+    cout << "4. Display outdated books\n";
+    cout << "5. Analyze Demand\n";
+    cout << "6. Add Staff\n";
+    cout << "7. Remove Staff\n";
+    cout << "8. Display Staff List\n";
+    cout << "9. Search Staff\n";
+    cout << "10. Exit\n";
     cout << "Enter your choice: ";
 }
 void searchBooks() {
@@ -341,7 +346,38 @@ void displayInventory() {
 
 bookFile.close();
 }
+// function to display outdated books
+void displayOutdatedBooks() {
+ 
+    ifstream file("bookData.txt");
+   
+    if (file.is_open()) {
+        string line;
+        while (getline(file, line)) {
+           stringstream ss(line);
+            string title, author, category,status , publicationDate;
 
+            getline(ss, title, ',');
+            getline(ss, author, ',');
+            getline(ss, category, ',');
+            getline(ss, status, ',');
+            getline(ss, publicationDate, ',');
+
+                 if(publicationDate < "2000"){
+
+            cout << "Title: " << title << endl;
+            cout << "Author: " << author << endl;
+            cout << "Category: " << category << endl;
+            cout << "Status: " << status << endl;
+            cout << "Publication Date: " << publicationDate << endl;
+            cout << endl;
+        }
+    }
+        file.close();
+    } else {
+        cout << "Unable to open the file." << endl;
+    }
+}
 // Function to analyze the demand for books
 void analyzeDemand() {
 // TODO: Implement this function

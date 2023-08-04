@@ -1,0 +1,28 @@
+A Brief History of Time,Stephen Hawking,Science Non-Fiction,Returned,1988
+The Girl on the Train,Paula Hawkins,Thriller,Borrowed,2015
+The Catcher in the Rye,J.D. Salinger,Classic Literature,Available,1915
+The Hunger Games,Suzanne Collins,Young Adult Fiction,Returned,2008
+The Da Vinci Code,Dan Brown,Mystery,Available,2003
+The Lord of the Rings,J.R.R. Tolkien,Fantasy,Borrowed,1954
+The Alchemist,Paulo Coelho,Fiction,Available,1988
+The Adventures of Tom Sawyer,Mark Twain,Children's Literature,Returned,1876
+The Great Gatsby,F. Scott Fitzgerald,Classic Literature,Available,1925
+Sapiens: A Brief History of Humankind,Yuval Noah Harari,Science Non-Fiction,Available,2011
+The Road,Cormac McCarthy,Dystopian Fiction,Borrowed,2006
+The Name of the Wind,Patrick Rothfuss,Fantasy,Available,2007
+The War of the Worlds,H.G. Wells,Science Fiction,Returned,1898
+The Picture of Dorian Gray,Oscar Wilde,Classic Literature,Available,1890
+The Help,Kathryn Stockett,Historical Fiction,Borrowed,2009
+The Adventures of Sherlock Holmes,Arthur Conan Doyle,Mystery,Available,1892
+The Hitchhiker's Guide to the Galaxy,Douglas Adams,Science Fiction,Returned,1979
+The Chronicles of Narnia,C.S. Lewis,Fantasy,Available,1950
+The Silence of the Lambs,Thomas Harris,Thriller,Available,1988
+The Color Purple,Alice Walker,Fiction,Available,1982
+The Time Machine,H.G. Wells,Science Fiction,Borrowed,1895
+The Girl with the Dragon Tattoo,Stieg Larsson,Thriller,Available,2005
+The Diary of a Young Girl,Anne Frank,Memoir,Returned,1947
+The Martian,Andy Weir,Science Fiction,Available,1951
+The Adventures of Huckleberry Finn,Mark Twain,Classic Literature,Available,1884
+The Fault in Our Stars,John Green,Young Adult Fiction,Returned,2012
+T1,A2,c2,2100
+T1,A2,c2,s2,2100

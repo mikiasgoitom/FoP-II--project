@@ -423,7 +423,8 @@ void displayOutdatedBooks() {
 }
 // Function to analyze the demand for books
 void analyzeDemand() {
-  vector<Book> books;
+  ifstream file2("d.txt");
+	vector<Book> books = parseFile(file2);
   sort(books.begin(), books.end(), [](const Book& a, const Book& b) {
         return a.borrowCount > b.borrowCount;
     });

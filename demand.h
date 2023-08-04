@@ -20,15 +20,6 @@ struct Book1 {
   int publishYear;
 };
 vector<Book1> bookss;
-/*void print_book(const Book1 &book) {
-  std::cout << book.title << ",";
-  std::cout << book.author << ",";
-  std::cout << book.genre << ",";
-  std::cout << static_cast<int>(book.status) << ",";
-  std::cout << book.pages << ",";
-  std::cout << book.borrowCount << ",";
-  std::cout << book.publishYear << std::endl;
-}*/
 vector<Book1> parseFile(ifstream &file) {
   //if (!file.is_open()) {
    // throw "Unable to open file";

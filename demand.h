@@ -10,7 +10,7 @@
 
 using namespace std;
 enum class Status { CheckedOut, CheckedIn };
-struct Book {
+struct Book1 {
   string title;
   string author;
   string genre;
@@ -19,8 +19,8 @@ struct Book {
   int borrowCount;
   int publishYear;
 };
-vector<Book> books;
-void print_book(const Book &book) {
+vector<Book1> bookss;
+/*void print_book(const Book1 &book) {
   std::cout << book.title << ",";
   std::cout << book.author << ",";
   std::cout << book.genre << ",";
@@ -28,19 +28,19 @@ void print_book(const Book &book) {
   std::cout << book.pages << ",";
   std::cout << book.borrowCount << ",";
   std::cout << book.publishYear << std::endl;
-}
-vector<Book> parseFile(ifstream &file) {
+}*/
+vector<Book1> parseFile(ifstream &file) {
   //if (!file.is_open()) {
    // throw "Unable to open file";
   //}
 
-  vector<Book> books2;
+  vector<Book1> books2;
   string line;
   while (getline(file, line)) {
     if (line[0] == '#' || line.empty()) {
       continue;
     }
-    Book book;
+    Book1 book;
     stringstream ss(line);
     string token;
     int index = 0;
@@ -67,10 +67,10 @@ vector<Book> parseFile(ifstream &file) {
       }
       index++;
     }
-    books.push_back(book);
+    bookss.push_back(book);
   }}
-  void demandAnalysis(vector<Book>& books2) {
-    sort(books2.begin(), books2.end(), [](const Book& a, const Book& b) {
+  void demandAnalysis(vector<Book1>& books2) {
+    sort(books2.begin(), books2.end(), [](const Book1& a, const Book1& b) {
         return a.borrowCount > b.borrowCount;
     });
     int ch;
@@ -85,25 +85,25 @@ vector<Book> parseFile(ifstream &file) {
     {
   case 1:
       cout<<"\n\nThe top 5 books that are in high demand.\n\n";
-    for(int i = 0; i < 5 && i < books.size(); i++) {
+    for(int i = 0; i < 5 && i < bookss.size(); i++) {
         cout<<i+1<<".  " << books2[i].title << " by " << books2[i].author <<"   "<<books2[i].borrowCount<<endl;
     }
     break;
   case 2:
       cout<<"\n\nThe top 10 books that are in high demand.\n\n";
-    for(int i = 0; i < 10 && i < books.size(); i++) {
+    for(int i = 0; i < 10 && i < bookss.size(); i++) {
         cout <<i+1<<".  "<<books2[i].title << " by " << books2[i].author <<"   "<<books2[i].borrowCount<<endl;
     }
     break;
   case 3:
       cout<<"\n\nThe demand for all books in general.\n\n";
-    for(int i = 0;i < books.size(); i++) {
+    for(int i = 0;i < bookss.size(); i++) {
         cout<<i+1<<".  " << books2[i].title << " by " << books2[i].author <<"   "<<endl;
     }
     break;
   case 4:
       cout<<"\n\n the top 5 books that are in low demand.\n\n";
-    for(int i = books.size()-1;i > books.size()-6; i--) {
+    for(int i = bookss.size()-1;i > bookss.size()-6; i--) {
         cout<<100-i<<".  " << books2[i].title << " by " << books2[i].author<<"   "<<books2[i].borrowCount<<endl;
     }
     break;
@@ -112,12 +112,3 @@ vector<Book> parseFile(ifstream &file) {
 
 }
   }
-
-int main() {
-	ifstream file2(FILENAME);
-	vector<Book> books2 = parseFile(file2);
-	demandAnalysis(books);
-
-
-	return 0;
-}

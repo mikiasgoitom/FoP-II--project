@@ -108,10 +108,16 @@ string toLowercase(string str) {
 }
 
 int main() {
+
+do{	
+	 system("CLS");
+    system("color F0");
   int choice;
   displayMainMenu();
   cin >> choice;
   if (choice == 1) {
+	    system("CLS");
+    system("color 0A");
     displayStudentMenu();
     int choice2;
     cin >> choice2;
@@ -126,10 +132,12 @@ int main() {
       checkAvailability();
       break;
     case 4:
-      cout << "Exiting program. Goodbye!\n";
+        cout << "\n****************************************************************************\n";
       break;
     }
   } else if (choice == 2) {
+	  system("CLS");
+    system("color 0C");
     displayStaffMenu();
     int choice3;
     cin >> choice3;
@@ -163,41 +171,68 @@ int main() {
       searchStaff();
       break;
     case 10:
-      cout << "Exiting program. Goodbye!\n";
+ cout << "\n****************************************************************************\n";
       break;
     }
   }
-
+	else
+{           
+           cout << "\n****************************************************************************\n";
+         cout << "Exiting program. Goodbye!\n";
+       cout << "\n****************************************************************************\n";
+       return 0;
+}
+system("pause");
+}while(true);
+	
   return 0;
 }
 void displayMainMenu() {
-  cout << "\n==== Library Management System ====\n";
-  cout << "1. Student\n";
-  cout << "2. Staff\n";
-  cout << "3. Exit\n";
-  cout << "Enter your choice: ";
+ cout << endl << endl;
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>                                   LIBRARY MANAGEMENT SYSTEM                             <>\n";
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>STUDENT   ...........................................................................[1] <>\n";
+    cout << "\t\t<> STAFF    ...........................................................................[2] <>\n";
+    cout << "\t\t<> EXIT     ...........................................................................[3] <>\n";
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\tEnter your choice : " ;
 }
 void displayStudentMenu() {
-  cout << "\n==== Student Menu ====\n";
-  cout << "1. Search Books\n";
-  cout << "2. Reserve Book\n";
-  cout << "3. Check Availability\n";
-  cout << "4. Exit\n";
-  cout << "Enter your choice: ";
+         cout << endl << endl;
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>                                   STUDENT MENU                                          <>\n";
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>SEARCH BOOKS   ......................................................................[1] <>\n";
+    cout << "\t\t<> RESERVE BOOK    ....................................................................[2] <>\n";
+    cout << "\t\t<> CHECK AVAILABILTY     ..............................................................[3] <>\n";
+    cout << "\t\t<> RETURN TO MAIN MENU     .............................................................[4] <>\n";
+    cout << "\t\t<>                                                                                          <>\n";
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\tEnter your choice : " ;
 }
 void displayStaffMenu() {
-  cout << "\n==== Staff Menu ====\n";
-  cout << "1. Add Book\n";
-  cout << "2. Remove Book\n";
-  cout << "3. Display Inventory\n";
-  cout << "4. Display outdated books\n";
-  cout << "5. Analyze Demand\n";
-  cout << "6. Add Staff\n";
-  cout << "7. Remove Staff\n";
-  cout << "8. Display Staff List\n";
-  cout << "9. Search Staff\n";
-  cout << "10. Exit\n";
-  cout << "Enter your choice: ";
+   cout << endl << endl;
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>                                   STAFF MENU                                            <>\n";
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<>ADD BOOKS   .........................................................................[1] <>\n";
+    cout << "\t\t<> REMOVE BOOK    .....................................................................[2] <>\n";
+    cout << "\t\t<> DISPLAY INVENTORY     ..............................................................[3] <>\n";
+    cout << "\t\t<> DISPLAY OUTDATED BOOKS  ............................................................[4] <>\n";
+    cout << "\t\t<> ANALYZ DEMAND     ..................................................................[5] <>\n";
+    cout << "\t\t<> ADD STAFF     ......................................................................[6] <>\n";
+    cout << "\t\t<> REMOVE STAFF     ...................................................................[7] <>\n";
+    cout << "\t\t<> DISPLAY STAFF LIST     .............................................................[8] <>\n";
+    cout << "\t\t<> SEARCH STAFF     ...................................................................[9] <>\n";
+    cout << "\t\t<>RETURN TO MAIN MENU ................................................................[10] <>\n";
+    cout << "\t\t<>                                                                                         <>\n";
+    cout << "\t\t<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
+    cout << "\t\tEnter your choice : " ;
 }
 void searchBooks() {
   string keyword;
@@ -213,7 +248,10 @@ void searchBooks() {
       if (toLowercase(book.title).find(toLowercase(keyword)) == string::npos) {
         continue;
       }
-
+      
+         
+      cout << endl;
+      cout << "****************************************************************************";
       cout << "\nTitle: " << book.title << endl;
       cout << "Author: " << book.author << endl;
       cout << "ISBN: " << book.ISBN << endl;
@@ -225,7 +263,10 @@ void searchBooks() {
     }
 
     if (!found) {
-      cout << "No books found.\n";
+            cout << "\n****************************************************************************\n";
+            cout << "No books found.\n";
+            cout << "\n****************************************************************************\n";
+
     }
   } catch (const char *msg) {
     cout << msg << endl;
@@ -248,9 +289,13 @@ void reserveBook() {
       found = true;
       if (book.quantity > 0) {
         book.quantity--;
-        cout << "Book reserved successfully!\n";
+                      cout << "\n****************************************************************************\n";
+               cout << "Book reserved successfully.\n";
+               cout << "\n****************************************************************************\n";
       } else {
-        cout << "Book is not available.\n";
+        cout << "\n****************************************************************************\n";
+            cout << "The book is not available for reservation.\n";
+            cout << "\n****************************************************************************\n";
       }
       break;
     }
@@ -262,7 +307,9 @@ void reserveBook() {
   if (found == false) {
     cout << "Book with ISBN " << ISBN << " not found.\n";
   } else {
-    cout << "Book reserved successfully.\n";
+                  cout << "\n****************************************************************************\n";
+               cout << "Book reserved successfully.\n";
+               cout << "\n****************************************************************************\n";
   }
 }
 
@@ -280,9 +327,15 @@ void checkAvailability() {
       if (book.ISBN == ISBN) {
         found = true;
         if (book.quantity > 0) {
+            cout << "\n****************************************************************************\n";
           cout << "The book is available for borrowing.\n";
+          cout << "\n****************************************************************************\n";
+                
         } else {
-          cout << "The book is not available for borrowing.\n";
+                     cout << "\n****************************************************************************\n";
+                        cout << "The book is not available for borrowing.\n";
+                         cout << "\n****************************************************************************\n";
+      
         }
       }
     }
@@ -292,7 +345,9 @@ void checkAvailability() {
   }
 
   if (!found) {
-    cout << "Book with ISBN " << ISBN << " not found.\n";
+                        cout << "\n****************************************************************************\n";
+                        cout << "Book with ISBN " << ISBN << " not found.\n";
+                        cout << "\n****************************************************************************\n";
   }
 }
 
@@ -317,7 +372,9 @@ void addBook() {
            << endl;
   bookFile.close();
 
-  cout << "Book added successfully.\n";
+          cout << "\n****************************************************************************\n";
+           cout << "Book added successfully.\n";
+          cout << "\n****************************************************************************\n";
 }
 
 // Function to remove a book
@@ -378,7 +435,7 @@ void displayInventory() {
     book.year = stoi(line.substr(0, pos));
     line.erase(0, pos + delimiter.length());
     book.quantity = stoi(line);
-
+         cout << "\n****************************************************************************\n";
     cout << "\nTitle: " << book.title << endl;
     cout << "Author: " << book.author << endl;
     cout << "ISBN: " << book.ISBN << endl;
@@ -386,6 +443,7 @@ void displayInventory() {
     cout << "Year of publication: " << book.year << endl;
     cout << "Quantity: " << book.quantity << endl;
   }
+         cout << "\n****************************************************************************\n";
 
   bookFile.close();
 }
@@ -407,18 +465,22 @@ void displayOutdatedBooks() {
       getline(ss, publicationDate, ',');
 
       if (publicationDate < "2000") {
-
+         cout << "\n****************************************************************************\n";
         cout << "Title: " << title << endl;
         cout << "Author: " << author << endl;
         cout << "Category: " << category << endl;
         cout << "Status: " << status << endl;
         cout << "Publication Date: " << publicationDate << endl;
+	         cout << "\n****************************************************************************\n";
         cout << endl;
       }
     }
     file.close();
   } else {
+	  cout << "\n****************************************************************************\n";
     cout << "Unable to open the file." << endl;
+      cout << "\n****************************************************************************\n";
+
   }
 }
 // Function to analyze the demand for books
@@ -429,11 +491,14 @@ void analyzeDemand() {
         return a.borrowCount > b.borrowCount;
     });
     int ch;
+	          cout << "\n****************************************************************************\n";
     cout<<"1.The top 5 books that are in high demand."<<endl;
     cout<<"2.The top 10 books that are in high demand."<<endl;
     cout<<"3.The demand for all books in general."<<endl;
     cout<<"4.the top 5 books that are in low demand."<<endl;
     cout<<"please enter your choice.1,2 or 3"<<endl;
+	          cout << "\n****************************************************************************\n";
+
     cin>>ch;
     system("cls");
     switch(ch)
@@ -463,6 +528,7 @@ void analyzeDemand() {
     }
     break;
   default:
+      cout << "\n****************************************************************************\n";
     cout<<"invalid choice";
 
 }
@@ -505,11 +571,17 @@ void removeStaff() {
   newStaffFile.close();
 
   if (!found) {
+     cout << "\n****************************************************************************\n";
     cout << "Staff member with email " << email << " not found.\n";
+   cout << "\n****************************************************************************\n";
+
   } else {
     remove("staff.txt");
     rename("newStaff.txt", "staff.txt");
+	            cout << "\n****************************************************************************\n";
     cout << "Staff member removed successfully.\n";
+	            cout << "\n****************************************************************************\n";
+
   }
 }
 // Function to display the list of staff members
@@ -554,10 +626,10 @@ void searchStaff() {
       staff.email = line.substr(0, pos);
       line.erase(0, pos + delimiter.length());
       staff.password = line;
-
+          cout << "\n****************************************************************************\n";
       cout << "\nName: " << staff.name << endl;
       cout << "Email: " << staff.email << endl;
-
+          cout << "\n****************************************************************************\n";
       count++;
     }
   }
@@ -565,6 +637,13 @@ void searchStaff() {
   staffFile.close();
 
   if (count == 0) {
+     cout << "\n****************************************************************************\n";
     cout << "No staff members found.\n";
+cout << "\n****************************************************************************\n";
+
   }
 }
+
+/************************************************************************
+*                    END OF THE PROGRAM.                                *
+************************************************************************/

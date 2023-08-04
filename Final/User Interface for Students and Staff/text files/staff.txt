@@ -1,3 +1,0 @@
-John Doe,johndoe@email.com,password123
-Jane Smith,janesmith@email.com,mysecretpassword
-Bob ,bobjohnson@email.com,letmein

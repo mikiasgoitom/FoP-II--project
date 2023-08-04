@@ -1,0 +1,100 @@
+To Kill a Mockingbird,Harper Lee,Fiction,1,281,15,1625097600
+1984,George Orwell,Fiction,1,328,12,1472688000
+Pride and Prejudice,Jane Austen,Fiction,1,279,18,631152000
+The Great Gatsby,F. Scott Fitzgerald,Fiction,1,180,14,1462060800
+The Catcher in the Rye,J.D. Salinger,Fiction,1,277,10,288864000
+Brave New World,Aldous Huxley,Fiction,1,288,9,1936092800
+The Hobbit,J.R.R. Tolkien,Fiction,1,310,20,315532800
+The Lord of the Rings,J.R.R. Tolkien,Fiction,1,1178,16,315532800
+Harry Potter and the Sorcerer's Stone,J.K. Rowling,Fiction,1,320,25,939945600
+The Chronicles of Narnia,C.S. Lewis,Fiction,1,767,11,315532800
+The Diary of a Young Girl,Anne Frank,Nonfiction,1,283,13,315532800
+Sapiens: A Brief History of Humankind,Yuval Noah Harari,Nonfiction,1,443,17,1446336000
+Educated,Tara Westover,Nonfiction,1,334,8,1514764800
+Becoming,Michelle Obama,Biography,1,426,19,1546300800
+The Autobiography of Malcolm X,Malcolm X,Biography,1,460,7,315532800
+The New Yorker,Various Authors,Periodical,1,80,22,315532800
+National Geographic,Various Authors,Periodical,1,160,16,315532800
+The Cat in the Hat,Dr. Seuss,Children,1,61,30,315532800
+Charlotte's Web,E.B. White,Children,1,184,21,315532800
+Harry Potter and the Chamber of Secrets,J.K. Rowling,Children,1,341,18,978307200
+The Elements of Style,William Strunk Jr. and E.B. White,Academic,1,105,14,315532800
+Introduction to Algorithms,Thomas H. Cormen,Academic,1,1312,9,631152000
+The Art of War,Sun Tzu,Academic,1,273,11,-544320000
+The Origin of Species,Charles Darwin,Academic,1,502,6,-378691200
+The Feminine Mystique,Betty Friedan,Academic,1,368,7,315532800
+The Power of Now,Eckhart Tolle,Academic,1,236,12,978307200
+The Lean Startup,Eric Ries,Academic,1,336,10,1293840000
+The Immortal Life of Henrietta Lacks,Rebecca Skloot,Academic,1,381,8,1262304000
+The Road Less Traveled,M. Scott Peck,Academic,1,315,9,315532800
+The Old Man and the Sea,Ernest Hemingway,Fiction,1,127,13,315532800
+The Outsiders,S.E. Hinton,Fiction,1,192,11,1577836800
+The Color Purple,Alice Walker,Fiction,1,288,9,441763200
+The Handmaid's Tale,Margaret Atwood,Fiction,1,311,15,378691200
+The Help,Kathryn Stockett,Fiction,1,451,12,1262304000
+The Girl on the Train,Paula Hawkins,Fiction,1,336,14,1420070400
+The Fault in Our Stars,John Green,Fiction,1,313,10,1362096000
+The Hunger Games,Suzanne Collins,Fiction,1,374,16,1262304000
+The Maze Runner,James Dashner,Fiction,1,375,8,1262304000
+The Giver,Lois Lowry,Fiction,1,240,11,631152000
+The Book Thief,Markus Zusak,Fiction,1,552,13,1262304000
+The Fault in Our Stars,John Green,Fiction,1,313,10,1362096000
+The Adventures of Tom Sawyer,Mark Twain,Fiction,1,219,12,315532800
+The Adventures of Huckleberry Finn,Mark Twain,Fiction,1,366,9,315532800
+The Sun Also Rises,Ernest Hemingway,Fiction,1,251,7,315532800
+The Old Man and the Sea,Ernest Hemingway,Fiction,1,127,13,315532800
+The Picture of Dorian Gray,Oscar Wilde,Fiction,1,254,8,631152000
+The Count of Monte Cristo,Alexandre Dumas,Fiction,1,1276,11,315532800
+The Brothers Karamazov,Fyodor Dostoevsky,Fiction,1,796,9,631152000
+The Little Prince,Antoine de Saint-Exupéry,Fiction,1,96,15,315532800
+The Name of the Wind,Patrick Rothfuss,Fiction,1,662,10,1262304000
+The Wise Man's Fear,Patrick Rothfuss,Fiction,1,994,8,1362096000
+The Girl with the Dragon Tattoo,Stieg Larsson,Fiction,1,672,12,1262304000
+The Girl Who Played with Fire,Stieg Larsson,Fiction,1,724,9,1362096000
+The Girl Who Kicked the Hornet's Nest,Stieg Larsson,Fiction,1,563,11,1420070400
+The Help,Kathryn Stockett,Fiction,1,451,12,1262304000
+The Martian,Andy Weir,Fiction,1,369,14,1420070400
+The Da Vinci Code,Dan Brown,Fiction,1,454,16,1104537600
+Angels & Demons,Dan Brown,Fiction,1,620,10,1025409600
+The Lost Symbol,Dan Brown,Fiction,1,670,9,1251763200
+Inferno,Dan Brown,Fiction,1,461,13,1362096000
+Origin,Dan Brown,Fiction,1,480,11,1506816000
+The Girl on the Train,Paula Hawkins,Fiction,1,336,14,1420070400
+Gone Girl,Gillian Flynn,Fiction,1,432,12,1341100800
+The Silent Patient,Alex Michaelides,Fiction,1,336,9,1546300800
+The Girl with the Dragon Tattoo,Stieg Larsson,Fiction,1,672,12,1262304000
+The Girl Who Played with Fire,Stieg Larsson,Fiction,1,724,9,1362096000
+The Girl Who Kicked the Hornet's Nest,Stieg Larsson,Fiction,1,563,11,1420070400
+The Help,Kathryn Stockett,Fiction,1,451,12,1262304000
+The Martian,Andy Weir,Fiction,1,369,14,1420070400
+The Da Vinci Code,Dan Brown,Fiction,1,454,16,1104537600
+Angels & Demons,Dan Brown,Fiction,1,620,10,1025409600
+The Lost Symbol,Dan Brown,Fiction,1,670,9,1251763200
+Inferno,Dan Brown,Fiction,1,461,13,1362096000
+Origin,Dan Brown,Fiction,1,480,11,1506816000
+The Girl on the Train,Paula Hawkins,Fiction,1,336,14,1420070400
+Gone Girl,Gillian Flynn,Fiction,1,432,12,1341100800
+The Silent Patient,Alex Michaelides,Fiction,1,336,9,1546300800
+The Girl with the Dragon Tattoo,Stieg Larsson,Fiction,1,672,12,1262304000
+The Girl Who Played with Fire,Stieg Larsson,Fiction,1,724,9,1362096000
+The Girl Who Kicked the Hornet's Nest,Stieg Larsson,Fiction,1,563,11,1420070400
+The Help,Kathryn Stockett,Fiction,1,451,12,1262304000
+The Martian,Andy Weir,Fiction,1,369,14,1420070400
+The Da Vinci Code,Dan Brown,Fiction,1,454,16,1104537600
+Angels & Demons,Dan Brown,Fiction,1,620,10,1025409600
+The Lost Symbol,Dan Brown,Fiction,1,670,9,1251763200
+Inferno,Dan Brown,Fiction,1,461,13,1362096000
+Origin,Dan Brown,Fiction,1,480,11,1506816000
+The Girl on the Train,Paula Hawkins,Fiction,1,336,14,1420070400
+Gone Girl,Gillian Flynn,Fiction,1,432,12,1341100800
+The Silent Patient,Alex Michaelides,Fiction,1,336,9,1546300800
+The Girl with the Dragon Tattoo,Stieg Larsson,Fiction,1,672,12,1262304000
+The Girl Who Played with Fire,Stieg Larsson,Fiction,1,724,9,1362096000
+The Girl Who Kicked the Hornet's Nest,Stieg Larsson,Fiction,1,563,11,1420070400
+The Help,Kathryn Stockett,Fiction,1,451,12,1262304000
+The Martian,Andy Weir,Fiction,1,369,14,1420070400
+The Da Vinci Code,Dan Brown,Fiction,1,454,16,1104537600
+Angels & Demons,Dan Brown,Fiction,1,620,10,1025409600
+The Lost Symbol,Dan Brown,Fiction,1,670,9,1251763200
+Inferno,Dan Brown,Fiction,1,461,13,1362096000
+Origin,Dan Brown,Fiction,1,480,11,1506816000

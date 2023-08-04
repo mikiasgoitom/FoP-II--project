@@ -423,8 +423,48 @@ void displayOutdatedBooks() {
 }
 // Function to analyze the demand for books
 void analyzeDemand() {
-  // TODO: Implement this function
-  cout << "This function is not yet implemented.\n";
+  vector<Book> books;
+  sort(books.begin(), books.end(), [](const Book& a, const Book& b) {
+        return a.borrowCount > b.borrowCount;
+    });
+    int ch;
+    cout<<"1.The top 5 books that are in high demand."<<endl;
+    cout<<"2.The top 10 books that are in high demand."<<endl;
+    cout<<"3.The demand for all books in general."<<endl;
+    cout<<"4.the top 5 books that are in low demand."<<endl;
+    cout<<"please enter your choice.1,2 or 3"<<endl;
+    cin>>ch;
+    system("cls");
+    switch(ch)
+    {
+  case 1:
+      cout<<"\n\nThe top 5 books that are in high demand.\n\n";
+    for(int i = 0; i < 5 && i < books.size(); i++) {
+        cout<<i+1<<".  " << books[i].title << " by " << books[i].author <<"   "<<books[i].borrowCount<<endl;
+    }
+    break;
+  case 2:
+      cout<<"\n\nThe top 10 books that are in high demand.\n\n";
+    for(int i = 0; i < 10 && i < books.size(); i++) {
+        cout <<i+1<<".  "<<books[i].title << " by " << books[i].author <<"   "<<books[i].borrowCount<<endl;
+    }
+    break;
+  case 3:
+      cout<<"\n\nThe demand for all books in general.\n\n";
+    for(int i = 0;i < books.size(); i++) {
+        cout<<i+1<<".  " << books[i].title << " by " << books[i].author <<"   "<<endl;
+    }
+    break;
+  case 4:
+      cout<<"\n\n the top 5 books that are in low demand.\n\n";
+    for(int i = books.size()-1;i > books.size()-6; i--) {
+        cout<<100-i<<".  " << books[i].title << " by " << books[i].author<<"   "<<books[i].borrowCount<<endl;
+    }
+    break;
+  default:
+    cout<<"invalid choice";
+
+}
 }
 // Function to add a staff member
 void addStaff() {

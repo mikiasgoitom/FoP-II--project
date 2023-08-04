@@ -16,6 +16,6 @@ void addStaff();
 void removeStaff();
 void displayStaffList();
 void searchStaff();
-
+void displayOutdatedBooks();
 
 #endif

@@ -1,0 +1,8 @@
+Name: Meseret
+Date of birth: 20/6/2003
+Education: SWE
+Address: Addsi Ababa
+Phone number: 090000020
+Employee ID: 9876
+Employee role: Librarian
+

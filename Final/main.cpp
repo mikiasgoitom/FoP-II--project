@@ -5,6 +5,7 @@
 #include <sstream>
 #include <string.h>
 #include <vector>
+#include "staff_info.h"
 using namespace std;
 
 const string FILENAME = "text files/books.txt";
@@ -535,18 +536,37 @@ void analyzeDemand() {
 }
 // Function to add a staff member
 void addStaff() {
-  Staff staff;
-  cout << "Enter staff name: ";
-  getline(cin >> ws, staff.name);
-  cout << "Enter staff email: ";
-  getline(cin >> ws, staff.email);
-  cout << "Enter staff password: ";
-  getline(cin >> ws, staff.password);
-  ofstream staffFile("staff.txt", ios::app);
-  staffFile << staff.name << "," << staff.email << "," << staff.password
-            << endl;
-  staffFile.close();
-  cout << "Staff member added successfully.\n";
+  int numOfEmployee;
+    cout<<"Enter the number of employees to register: ";
+    cin>>numOfEmployee;
+    cin.ignore();
+
+    for(int i=0;i<numOfEmployee;i++){
+        cout<<"\n"<<i+1<<".Enter name: ";
+        getline(cin,staffInfo.fullName);
+        cout<<"Enter date of birth (DD/MM/YYYY): ";
+        cin>>staffInfo.dateOfBirth.day>>staffInfo.dateOfBirth.month>>staffInfo.dateOfBirth.year;
+        cin.ignore();
+        cout<<"Enter email: ";
+        getline(cin, staffInfo.email);
+        cout<<"Enter password: ";
+        getline(cin, staffInfo.password);
+        cout<<"Enter education level: ";
+        getline(cin, staffInfo.educationLevel);
+        cout<<"Enter address: ";
+        getline(cin, staffInfo.recidency);
+        cout<<"Enter phone number: ";
+        getline(cin, staffInfo.phoneNo);
+        cout<<"Enter assigned employee ID: ";
+        getline(cin, staffInfo.ID);
+        cout<<"Enter assigned employee role: ";
+        getline(cin, staffInfo.role);
+
+        staff.push_back(staffInfo);
+    }
+        saveEmployeeData(staff, "employee_data.txt");
+
+cout << "\nStaff members added successfully.\n";
 }
 
 // Function to remove a staff member
@@ -586,23 +606,7 @@ void removeStaff() {
 }
 // Function to display the list of staff members
 void displayStaffList() {
-  ifstream staffFile("staff.txt");
-  string line;
-  while (getline(staffFile, line)) {
-    Staff staff;
-    size_t pos = 0;
-    string delimiter = ",";
-    pos = line.find(delimiter);
-    staff.name = line.substr(0, pos);
-    line.erase(0, pos + delimiter.length());
-    pos = line.find(delimiter);
-    staff.email = line.substr(0, pos);
-    line.erase(0, pos + delimiter.length());
-    staff.password = line;
-    cout << "\nName: " << staff.name << endl;
-    cout << "Email: " << staff.email << endl;
-  }
-  staffFile.close();
+  readEmployeeData("employee_data.txt");
 }
 
 // Function to search for a staff member

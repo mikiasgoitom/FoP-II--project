@@ -108,6 +108,10 @@ string toLowercase(string str) {
   return str;
 }
 
+// Declare and initialize structure from staff_info.h
+vector <librarianInfo> staff;
+librarianInfo staffInfo;
+
 int main() {
 
 do{	
@@ -154,7 +158,7 @@ do{
       displayInventory();
       break;
     case 4:
-      displayOutdatedBooks();
+      //displayOutdatedBooks();
       break;
     case 5:
       analyzeDemand();

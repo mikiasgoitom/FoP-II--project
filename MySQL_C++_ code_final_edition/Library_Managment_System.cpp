@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 string user_email;
 string user_password;
 
@@ -30,6 +29,7 @@ struct BOOK{
     string department;
     string status;
 };
+
 
 // function prototype
 //----------------
@@ -95,7 +95,7 @@ int main(){
    	char HOST[] = "localhost";
     char USER[] = "root";
     char PASS[] =  "";    /* if you are using IDE Like DEV++ which need sql connection by source code
-                              add your MYsql server password here and change the above if they are different;*/
+                              add your MySQL server password here and change the above if they are different;*/
 
     MYSQL* conn;        // MySQL connection object
     MYSQL_RES* res;     // MySQL result object
@@ -111,7 +111,6 @@ int main(){
 
 
     //---------------------------------
-    //this
     welcome_page();
     //---------------------------------
 
@@ -195,7 +194,7 @@ login_reg_page :
        //------------------------------------
      case 3:
      aboutUs();
-     gotoxy(33,27);
+     gotoxy(33,28);
        system("pause");
        system("CLS");
      goto home_page;
@@ -210,7 +209,7 @@ login_reg_page :
    default:
    	gotoxy(65,31);
     SetConsoleTextAttribute(hConsole, 11);
-    cout << "Invalid inpute!" <<endl;
+    cout << "Invalid input!" <<endl;
     	gotoxy(65,32);
     system("pause");
     system("CLS");
@@ -228,15 +227,14 @@ login_reg_page :
     return 0;
 }
 
-//function definations
+//function definitions
 //--------------------
 
 void homePage(){
 
-
        string L1 = "-----------------------------\n";
        string L2 = "|                           |\n";
-       string L3 = "|1.ADMIN\\STAFF PAGE        |\n";
+       string L3 = "|1.ADMIN\\STAFF PAGE         |\n";
        string L4 = "|2.STUDENT                  |\n";
        string L5 = "|3.ABOUT US                 |\n";
        string L6 = "|4.EXIT                     |\n";
@@ -343,15 +341,8 @@ void login_reg_page(){
        string L4 = "|2. REGISTER                |\n";
        string L5 = "|3. BACK                    |\n";
        string L7 = "|CHOICE -                   |\n";
-       string L0 =  "Registration form             ";
        string L01 = "------------------------------\n";
 
-          gotoxy(55,1);
-    SetConsoleTextAttribute(hConsole, 7);
-    Delayer_menu(L0);
-     gotoxy(55,2);
-    SetConsoleTextAttribute(hConsole, 7);
-    Delayer_menu(L01);
 
        //************************************************************
     gotoxy(55,4);
@@ -443,6 +434,8 @@ void registerAdmin(MYSQL* conn, const string& firstName, const string& lastName,
 
        string admin_reg_succ = "Admin registration successful! \n";
       string admin_reg_not_succ = " Error Admin registration! \n";
+
+
     // Execute the SQL query
     if (mysql_query(conn, query.c_str())) {
    	gotoxy(54,28);
@@ -455,8 +448,6 @@ void registerAdmin(MYSQL* conn, const string& firstName, const string& lastName,
     SetConsoleTextAttribute(hConsole, 10);
     Delayer(admin_reg_succ);
 	}
-
-
 
 }
 // Function to display book status
@@ -585,7 +576,6 @@ bool checkCredentials(MYSQL* conn, const string& email, const string& password) 
     return isValid;
 }
 
-
 void loginstudent(MYSQL* conn){
 
    system("CLS");
@@ -676,7 +666,6 @@ void loginstudent(MYSQL* conn){
             cout << "invalid inpute" << endl;
                system("pause");
              system("CLS");
-              goto stu_page;
             break;
         }
 
@@ -686,8 +675,6 @@ void loginstudent(MYSQL* conn){
     Delayer(incorrect_email_password);
             system("pause");
              system("CLS");
-              goto stu_page;
-
     }
 
 }
@@ -778,8 +765,8 @@ void registeradmin(MYSQL* conn){
      int length = user.password.length();
 
          if(length > 8){
+                gotoxy(54,27);
      	  SetConsoleTextAttribute(hConsole, 10);
-     	  	gotoxy(54,27);
      	cout << "strong password" << endl;
 
 	 }
@@ -857,7 +844,7 @@ void loginadmin(MYSQL* conn){
 
             case 1:
             addbook(conn);
-              gotoxy(15,17);
+              gotoxy(15,18);
              system("pause");
              system("CLS");
               goto admin_page;
@@ -865,7 +852,7 @@ void loginadmin(MYSQL* conn){
 
             case 2:
             Delete(conn);
-            	 gotoxy(15,7);
+            	 gotoxy(15,8);
              system("pause");
               system("CLS");
                goto admin_page;
@@ -873,6 +860,7 @@ void loginadmin(MYSQL* conn){
 
             case 3:
             search(conn);
+            gotoxy(15,11);
              system("pause");
              system("CLS");
               goto admin_page;
@@ -906,7 +894,7 @@ void loginadmin(MYSQL* conn){
             default:
                 SetConsoleTextAttribute(hConsole, 12);
                 	   gotoxy(10,24);
-            cout << "invalid inpute" << endl;
+            cout << "invalid input" << endl;
               gotoxy(10,25);
              system("pause");
              system("CLS");
@@ -1034,8 +1022,8 @@ void registerstudent(MYSQL* conn){
 
              if(length > 8){
      	  SetConsoleTextAttribute(hConsole, 11);
-     	cout << "strong password" << endl;
      		gotoxy(56,35);
+     		cout << "strong password" << endl;
 	 }
 	 else{
 	 	  SetConsoleTextAttribute(hConsole, 11);
@@ -1071,7 +1059,7 @@ void addbook(MYSQL* conn){
 
        BOOK  book;
   system("CLS");
-   // string title, author, publicationDate, department, status;
+
      cin.ignore();
 	// Accept book details from the user
 	 gotoxy(15,4);
@@ -1093,7 +1081,7 @@ void addbook(MYSQL* conn){
 
     	 gotoxy(15,11);
     cout <<"Department: ";
-    	 gotoxy(46,12);
+    	 gotoxy(26,12);
     	 cout << "-----------------------------------------";
 
     	 gotoxy(15,13);
@@ -1107,14 +1095,13 @@ void addbook(MYSQL* conn){
     getline(cin, book.author);
     	  gotoxy(46,9);
     getline(cin, book.publication_date);
-    	  gotoxy(46,11);
+    	  gotoxy(26,11);
     getline(cin, book.department);
-    	  gotoxy(50,13);
+    	  gotoxy(52,13);
     getline(cin, book.status);
 
 
     string query = "INSERT INTO books (title, author, publication_date, department, status) VALUES ('" +  book.title + "', '" + book.author + "', '" + book.publication_date + "', '" + book.department + "', '" + book.status + "')";
-
     string str = "\nAdding  ...";
 
 
@@ -1124,16 +1111,13 @@ void addbook(MYSQL* conn){
 		  Sleep(15);
     }
 
-   // countdown(str,color,15,15);
-
-
     // Execute the SQL query
     if (mysql_query(conn, query.c_str())) {
-        //cout << "Error executing SQL query: "  << endl;`
+        cout << "Error executing SQL query: "  << endl;
     }
 
      else
-     gotoxy(15,16);
+     gotoxy(15,17);
     cout << "Book added successfully!" << endl;
 
 }
@@ -1231,10 +1215,7 @@ void Delete(MYSQL* conn){
     // Construct the SQL query to delete the book
     string query = "DELETE FROM books WHERE title = '" + bookTitle + "'";
 
-    // Execute the SQL query
-    if (mysql_query(conn, query.c_str())) {
-
-    	  for(int i = 0 ; i <= 100 ; i++){
+      for(int i = 0 ; i <= 100 ; i++){
 
     	    gotoxy(15,6);
            cout<< str << i << "%";
@@ -1242,19 +1223,13 @@ void Delete(MYSQL* conn){
 
           }
 
+    // Execute the SQL query
+    if (mysql_query(conn, query.c_str())) {
     	 SetConsoleTextAttribute(hConsole, 12);
     	 	gotoxy(15,7);
     cout << "unable to delete the book" << endl;
     }
     else{
-
-    	  for(int i = 0 ; i <= 100 ; i++){
-
-    	    gotoxy(15,6);
-           cout<< str << i << "%";
-		   Sleep(15);
-
-          }
 
     SetConsoleTextAttribute(hConsole, 12);
     gotoxy(15,7);
@@ -1285,31 +1260,29 @@ void search(MYSQL* conn){
     cin.ignore(); // Ignore the newline character left in the input buffer
 
     // Ask the user for the search keyword
-    gotoxy(15,7);
+    // Construct the SQL query based on the search criteria
+    string query;
+    if (searchBy == "title") {
+              gotoxy(15,7);
+    cout << "Enter the " << searchBy << " to search: ";
+    	 gotoxy(42,8);
+    	 cout << "-----------------------------------------";
+    	 gotoxy(42,7);
+    getline(cin, keyword);
+        query = "SELECT * FROM books WHERE title LIKE '%" + keyword + "%'";
+    } else if (searchBy == "author") {
+          gotoxy(15,7);
     cout << "Enter the " << searchBy << " to search: ";
     	 gotoxy(42,8);
     	 cout << "-----------------------------------------";
     	 gotoxy(42,7);
     getline(cin, keyword);
 
-
-    // Construct the SQL query based on the search criteria
-    string query;
-    if (searchBy == "title") {
-        query = "SELECT * FROM books WHERE title LIKE '%" + keyword + "%'";
-    } else if (searchBy == "author") {
         query = "SELECT * FROM books WHERE author LIKE '%" + keyword + "%'";
     } else {
-        cout << "Invalid search criteria." << endl;
+        cout << "\t\n Invalid search criteria." << endl;
 
     }
-
-      // countdown(str,color,15,9);
-        for(int i = 0 ; i <= 100 ; i++){
-    	 gotoxy(15,10);
-           cout<< str << i << "%";
-		  Sleep(15);
-          }
       cout << endl << endl;
     // Execute the SQL query
 
@@ -1323,8 +1296,14 @@ else{
 
     // Check if any books are found
     if ((row = mysql_fetch_row(res))) {
-        cout << "Matching books found:" << endl;
-        while (row) {
+                    for(int i = 0 ; i <= 100 ; i++){
+    	 gotoxy(15,9);
+           cout<< str << i << "%";
+		  Sleep(15);
+          }
+
+            cout << "\nMatching books found:" << endl;
+
         	cout << "\n\n";
             // Print book details
             cout << "\t\tTitle: " << row[1] << endl;
@@ -1335,9 +1314,15 @@ else{
             cout << "\t\t---------------------" << endl;
 
             row = mysql_fetch_row(res); // Fetch the next row
-        }
+
     } else {
-        cout << "\t\tNo matching books found." << endl;
+                for(int i = 0 ; i <= 100 ; i++){
+    	 gotoxy(15,9);
+           cout<< str << i << "%";
+		  Sleep(15);
+          }
+
+        cout << "\t\t\nNo matching books found." << endl;
     }
 }
     // Free the result set memory
@@ -1388,9 +1373,9 @@ system("CLS");
     cin.ignore();    // Ask the user for the book title to borrow
     gotoxy(15,4);
     cout << "Enter the book title to borrow: ";
-    	 gotoxy(44,5);
+    	 gotoxy(47,5);
     	 cout << "-----------------------------------------";
-    	  gotoxy(44,4);
+    	  gotoxy(47,4);
     getline(cin, bookTitle);
 
     // Construct the SQL query to update the book status
@@ -1401,12 +1386,12 @@ system("CLS");
         cout << "Error executing SQL query: "  << endl;
     }
 
-else{
-	cout << endl;
+else {
+	    cout << endl;
 		  gotoxy(44,7);
-    cout << "Book borrowed successfully!" << endl;
+        cout << "Book borrowed successfully!" << endl;
     	  gotoxy(44,8);
-    cout << "Wishing you success ! May your reading time be engaging and fruitful." <<endl;
+        cout << "Wishing you success ! May your reading time be engaging and fruitful." <<endl;
 }
 
 
@@ -1418,7 +1403,7 @@ void updatedbook(MYSQL* conn){
     MYSQL_RES* res;     // MySQL result object
     MYSQL_ROW row;
 
-   // string title, author, publicationDate, department, status;
+
     cin.ignore();
 
     // Accept the title of the book to be updated from the user
@@ -1444,6 +1429,8 @@ void updatedbook(MYSQL* conn){
     if ((row = mysql_fetch_row(res))) {
     	cout << "\n\n\n";
         cout << "\t\tEnter new book details:" << endl;
+         cout << "\t\tTitle: ";
+        getline(cin, book.title);
         cout << "\t\tAuthor: ";
         getline(cin, book.author);
         cout << "\t\tPublication Date (YYYY-MM-DD): ";
@@ -1457,11 +1444,9 @@ void updatedbook(MYSQL* conn){
         mysql_free_result(res);
 
         // Construct the SQL query to update the book details
-        query = "UPDATE books SET author = '" + book.author + "', publication_date = '" + book.publication_date + "', department = '" + book.department + "', status = '" + book.status + "' WHERE title = '" + book.title + "'";
-
+        query = "UPDATE books SET title = '" + book.title + "' +  author = '" + book.author + "', publication_date = '" + book.publication_date + "', department = '" + book.department + "', status = '" + book.status + "' WHERE title = '" + book.title + "'";
         string str = "Updating  ...";
         int color = 14;
-       // countdown(str,color,14,16);
 
           for(int i = 0 ; i <= 100 ; i++){
     	 gotoxy(15,15);
@@ -1478,22 +1463,19 @@ void updatedbook(MYSQL* conn){
         SetConsoleTextAttribute(hConsole, 10);
         gotoxy(15,16);
         cout << "Book details updated successfully!" << endl;
-        gotoxy(15,17);
-        system("pause");
+
 
     } else {
         SetConsoleTextAttribute(hConsole, 12);
         gotoxy(15,6);
         cout << "Book not found in the database." << endl;
-        gotoxy(15,7);
-        system("pause");
+
 
     }
 
 }
 
 }
-
 
 void displayAdminProfile(MYSQL_ROW row) {
 
@@ -1547,11 +1529,11 @@ void student_menu(){
        string L3 = "|1. TAKE BOOK                  |\n";
        string L4 = "|3. DISPLAY MY DEPARTMENT BOOKS|\n";
        string L5 = "|2. DISPLAY AVAILABLE BOOKS    |\n";
-       string L6 = "|4. ACCOUNT SETTING            |\n";
+       string L6 = "|4. MY ACCOUNT                 |\n";
        string L9 = "|5. BACK                       |\n";
        string L7 = "|CHOICE -                      |\n";
        string L0 =  "STUDENT PAGE              ";
-        string L01 = "---------------------------------------------------------------------------------------------------------";
+        string L01 = "----------------------------------------------------------------------------------------------------------------";
 
        //************************************************************
         gotoxy(5,1);
@@ -1581,19 +1563,19 @@ void student_menu(){
     //--------------------------------------
       //************************************************************
     gotoxy(45,4);
-    SetConsoleTextAttribute(hConsole, 8);
+    SetConsoleTextAttribute(hConsole, 12);
     Delayer_menu(L1);
         gotoxy(45,5);
-    SetConsoleTextAttribute(hConsole, 8);
+    SetConsoleTextAttribute(hConsole, 12);
     Delayer_menu(L2);
         gotoxy(45,6);
-    SetConsoleTextAttribute(hConsole, 8);
+    SetConsoleTextAttribute(hConsole, 12);
     Delayer_menu(L5);
         gotoxy(45,7);
-    SetConsoleTextAttribute(hConsole, 8);
+    SetConsoleTextAttribute(hConsole, 12);
     Delayer_menu(L2);
          gotoxy(45,8);
-    SetConsoleTextAttribute(hConsole, 8);
+    SetConsoleTextAttribute(hConsole, 12);
     Delayer_menu(L1);
 
     //--------------------------------------
@@ -1671,11 +1653,11 @@ void admin_menu(){
        string L5 = "|3. SEARCH                  |\n";
        string L6 = "|4. UPDATE BOOK             |\n";
        string L8 = "|5. DISPLAY ALL BOOKS       |\n";
-       string L10 = "|6. ACCOUNT SETTING         |\n";
+       string L10 = "|6. ACCOUNT                 |\n";
        string L9 = "|7. BACK                    |\n";
        string L7 = "|CHOICE -                   |\n";
        string L0 = "ADMIN(STAFF) PAGE              ";
-       string L01 = "---------------------------------------------------------------------------------------------------------";
+       string L01 = "-----------------------------------------------------------------------------------------";
        //************************************************************
 
     gotoxy(5,1);
@@ -1821,8 +1803,6 @@ void admin_menu(){
 }
 
 void accountSetting_stu(MYSQL* conn){
-
-
       system("CLS");
 
 	  string email , password;
@@ -1831,8 +1811,7 @@ void accountSetting_stu(MYSQL* conn){
       email = user_email;
       password = user_password;
 
-
-        string query = "SELECT * FROM student WHERE email = '" + email + "' AND password = '" + password + "'";
+      string query = "SELECT * FROM student WHERE email = '" + email + "' AND password = '" + password + "'";
 
     if (mysql_query(conn, query.c_str())) {
         cout << "Error executing SQL query: " << endl;

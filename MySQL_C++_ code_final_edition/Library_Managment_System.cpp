@@ -181,7 +181,7 @@ int main() {
       default:
         SetConsoleTextAttribute(hConsole, 11);
         gotoxy(65, 23);
-        cout << "Invalid inpute!" << endl;
+        cout << "Invalid input!" << endl;
         gotoxy(65, 23);
         system("pause");
         system("CLS");
@@ -663,7 +663,7 @@ void loginstudent(MYSQL *conn) {
       break;
 
     default:
-      cout << "invalid inpute" << endl;
+      cout << "invalid input" << endl;
       system("pause");
       system("CLS");
       break;
